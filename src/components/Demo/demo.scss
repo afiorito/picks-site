@@ -1,0 +1,97 @@
+@import '../../styles/variables';
+@import '../Device/device';
+
+@mixin transform($scale) {
+  transform: scale($scale, $scale) skew(-5deg, 9deg) rotate(6deg);
+}
+
+$breakpoint-start: 1000;
+
+.device {
+  @include transform(0.75);
+  backface-visibility: hidden;
+
+  .nav-header {
+    display: flex;
+    justify-content: center;
+    border-bottom: 0.5px solid #e3e3e3;
+    background: #fff;
+
+    padding: 24px 0px 8px 0px;
+    img {
+      height: 24px;
+    }
+  }
+
+  .generators {
+    padding: 0px 8px;
+  }
+
+  .generator {
+    background: #fff;
+    margin-top: 8px;
+    border-radius: 4px;
+    padding: 8px;
+
+    h3 {
+      margin-bottom: 4px;
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .picker {
+      border-radius: 4px;
+      padding: 1px 4px;
+      display: inline;
+      color: #fff;
+    }
+  }
+
+  @media only screen and (min-width: 420px) {
+    @include device(250px);
+
+    .generators {
+      padding: 0px 16px;
+    }
+
+    .generator {
+      margin-top: 16px;
+      border-radius: 8px;
+      padding: 16px;
+
+      h3 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 520px) {
+    @include device(348px);
+
+    .generator {
+      h3 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media only screen and (min-width: $sm-container) and (max-width: 900px) {
+    @include transform(0.55);
+  }
+
+  @media only screen and (min-width: 900px) and (max-width: 1020px) {
+    @include transform(0.65);
+  }
+}

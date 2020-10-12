@@ -1,0 +1,60 @@
+@import '../../styles/variables';
+
+@mixin device($width) {
+  $height: $width * 2;
+  $side: (21px / 348px) * $width;
+  $side-radius: (54px / 348px) * $width;
+  $screen-radius: (33px / 348px) * $width;
+  $header-height: (18px / 348px) * $width;
+  $header-width: (164px / 348px) * $width;
+  $header-radius: (13px / 348px) * $width;
+
+  position: relative;
+  z-index: 1;
+  height: $height;
+  width: $width;
+
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+    display: block;
+  }
+
+  .side {
+    background: #1c1c1c;
+    border-radius: $side-radius;
+    height: $height;
+    padding: $side;
+    width: $width;
+    z-index: 1;
+  }
+
+  .screen {
+    background: $secondary-background-color;
+    background-position: center center;
+    background-size: cover;
+    border-radius: $screen-radius;
+    position: relative;
+    height: $height - 2 * $side;
+    width: $width - 2 * $side;
+    z-index: 998;
+    overflow: hidden;
+  }
+
+  .header {
+    background: #1c1c1c;
+    border-bottom-left-radius: $header-radius;
+    border-bottom-right-radius: $header-radius;
+    height: $header-height;
+    left: ($width - $header-width) / 2;
+    position: absolute;
+    top: $side - 1;
+    width: $header-width;
+    z-index: 999;
+  }
+}
+
+.device {
+  @include device(200px);
+}
