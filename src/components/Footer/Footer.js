@@ -6,7 +6,6 @@ import './footer.scss';
 
 export const Footer = () => (
   <footer className="footer">
-    <div className="footer__separator"></div>
     <div className="footer__container container">
       <div className="section-container">
         <section className="footer__section">
