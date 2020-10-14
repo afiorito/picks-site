@@ -12,7 +12,7 @@ export default ({ data }) => {
   return (
     <Layout className="container">
       <SEO title={frontmatter.title} />
-      <div className="content">
+      <div className={`content ${frontmatter.path.split('/')[1]}`}>
         <h1>{frontmatter.title}</h1>
         <div
           className="content__body"
