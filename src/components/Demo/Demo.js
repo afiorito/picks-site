@@ -5,7 +5,7 @@ import './demo.scss';
 
 const foodPicker = {
   name: '@cuisine',
-  color: '#80C2FF',
+  color: '#FFDC7B',
   picks: [
     'Chinese',
     'Thai',
@@ -32,7 +32,7 @@ const timePicker = {
 const data = [
   {
     name: 'Dinner',
-    segments: ['For dinner I should eat ', 0, ' food.'],
+    segments: ['For dinner, I should eat ', 0, ' food.'],
     pickers: [foodPicker],
   },
   {
