@@ -8,11 +8,6 @@
     padding-top: 32px;
   }
 
-  .section-container {
-    display: flex;
-    justify-content: space-around;
-  }
-
   .footer__section {
     display: flex;
     flex-direction: column;
@@ -23,7 +18,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0px 32px;
   }
 
   .footer__section-title {
