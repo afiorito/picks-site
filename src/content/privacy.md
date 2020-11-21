@@ -8,7 +8,9 @@ This Privacy Policy describes the policies and procedures on the collection, use
 
 ## Information We Collect
 
-Any information collected is anonymized device data. Electriapp does not collect any personal information in Picks or on the website. Data on device type, operating system, in-app purchses and user experience is automatically collected when using our product. Electriapp does not have access to content you create in Picks.
+Any information collected is anonymized device data. Electriapp does not collect any personal information in Picks or on the website. Data on device type, operating system, in-app purchases and user experience is automatically collected when using our product. Electriapp does not have access to content you create in Picks.
+
+If you purchase Picks Pro, additional non-personally identifiable data will be kept. Your billing information, address, and name are all maintained by the App Store and are not visible to us. We will simply get information about whether or not you made a purchase. This is all made available to us in an anonymous fashion. This anonymous data is also shared with the purchase provider ([RevenueCat](https://www.revenuecat.com/dpa)).
 
 ## Information Usage
 
@@ -26,4 +28,5 @@ If you have questions regarding this privacy policy, you may email support@elect
 
 If we decide to change our privacy policy, we will post those changes on this page. Summary of changes so far:
 
+- **Nov 21, 2020**: Added RevenueCat information
 - **Oct 14, 2020**: First Published
