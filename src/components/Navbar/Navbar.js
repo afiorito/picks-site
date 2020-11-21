@@ -10,7 +10,7 @@ export const Navbar = () => (
       <Link to="/">
         <img src={logo} alt="Picks Logo" />
       </Link>
-      <OutboundLink target="_blank" href="https://apps.apple.com/us/app/picks-random-decision-maker/id1536305926?mt=8" rel="noopener noreferrer">
+      <OutboundLink target="_blank" href="https://apps.apple.com/us/app/picks-random-generator/id1536305926?mt=8" rel="noopener noreferrer">
         <button className="download-button">Download</button>
       </OutboundLink>
     </div>
