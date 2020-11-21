@@ -4,6 +4,7 @@ import SEO from '../components/seo';
 import './index.scss';
 import { Demo } from '../components/Demo';
 import dots from '../images/dots.svg';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 const IndexPage = () => (
   <Layout className="index">
@@ -15,15 +16,9 @@ const IndexPage = () => (
           Making Decisions. <br /> Simplified.
         </h1>
         <p>Add a little fun to your decision making.</p>
-        <a
-          className="ios-download"
-          href="https://apps.apple.com/us/app/instagram/id389801252?itsct=apps_box&amp;itscg=30200"
-        >
-          <img
-            src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-US?size=250x83&amp;releaseDate=1286323200&h=18f79cd4c60f3a0a079c6b8b1ee6f670"
-            alt="Download on the App Store"
-          />
-        </a>
+        <OutboundLink target="_blank" href="https://apps.apple.com/us/app/picks-random-decision-maker/id1536305926?mt=8" className="app-store" rel="noopener noreferrer">
+          <img src="https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2020-02-03&kind=iossoftware&bubble=ios_apps" alt="Download on the App Store" />
+        </OutboundLink>
       </section>
       <section className="section device-section">
         <Demo />

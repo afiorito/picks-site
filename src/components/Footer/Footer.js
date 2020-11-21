@@ -34,14 +34,14 @@ export const Footer = () => (
         </section>
         <section className="footer__section">
           <h4 className="footer__section-title">Picks</h4>
-          <a
-            href="https://itunes.apple.com/app/id1474711114"
+          <OutboundLink
+            href="https://apps.apple.com/us/app/picks-random-decision-maker/id1536305926?mt=8"
             className="footer__link"
             target="_blank"
             rel="noopener noreferrer"
           >
             Get Picks
-          </a>
+          </OutboundLink>
           <Link className="footer__link" to="/about">
             About
           </Link>

@@ -4,6 +4,17 @@
   padding: 0px 16px 32px 16px;
   background: $secondary-background-color;
 
+  .app-store {
+    img {
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+      border-bottom-left-radius: 6px;
+      width: 125px;
+      height: 41.5px;
+    }
+  }
+
   .container {
     display: flex;
     flex-direction: column-reverse;
