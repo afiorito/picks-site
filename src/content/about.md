@@ -6,7 +6,7 @@ title: 'About'
 
 ## Creators
 
-The application is developed by [Anthony](https://twitter.com/ovoant) and designed by [Marial Grace](https://www.instagram.com/mgcl__).
+The application is developed by [Anthony](https://twitter.com/ovoant) and designed by Marial Grace.
 
 ## What is Electriapp?
 
