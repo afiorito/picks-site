@@ -1,17 +1,17 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { Layout } from '../components/Layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 
 import './content.scss';
 
-export default ({ data }) => {
+const ContentTemplate = ({ data }) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
 
   return (
     <Layout className="container">
-      <SEO title={frontmatter.title} />
+      <Seo title={frontmatter.title} />
       <div className={`content ${frontmatter.path.split('/')[1]}`}>
         <h1>{frontmatter.title}</h1>
         <div
@@ -22,6 +22,8 @@ export default ({ data }) => {
     </Layout>
   );
 };
+
+export default ContentTemplate;
 
 export const pageQuery = graphql`
   query($path: String!) {

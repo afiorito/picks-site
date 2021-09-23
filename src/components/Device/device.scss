@@ -1,13 +1,14 @@
+@use 'sass:math';
 @import '../../styles/variables';
 
 @mixin device($width) {
   $height: $width * 2;
-  $side: (21px / 348px) * $width;
-  $side-radius: (54px / 348px) * $width;
-  $screen-radius: (33px / 348px) * $width;
-  $header-height: (18px / 348px) * $width;
-  $header-width: (164px / 348px) * $width;
-  $header-radius: (13px / 348px) * $width;
+  $side: math.div(21px, 348px) * $width;
+  $side-radius: math.div(54px, 348px) * $width;
+  $screen-radius: math.div(33px, 348px) * $width;
+  $header-height: math.div(18px, 348px) * $width;
+  $header-width: math.div(164px, 348px) * $width;
+  $header-radius: math.div(13px, 348px) * $width;
 
   position: relative;
   z-index: 1;
@@ -47,7 +48,7 @@
     border-bottom-left-radius: $header-radius;
     border-bottom-right-radius: $header-radius;
     height: $header-height;
-    left: ($width - $header-width) / 2;
+    left: math.div(($width - $header-width), 2);
     position: absolute;
     top: $side - 1;
     width: $header-width;

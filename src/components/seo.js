@@ -23,9 +23,7 @@ function SEO({ description, lang, meta, title }) {
         }
         file(relativePath: { eq: "cover.png" }) {
           childImageSharp {
-            fixed {
-              src
-            }
+            gatsbyImageData(layout: FIXED)
           }
         }
       }
@@ -47,6 +45,10 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          name: 'apple-itunes-app',
+          content: 'app-id=1536305926',
+        },
+        {
           property: `og:title`,
           content: title,
         },
@@ -56,7 +58,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: `https://picks.electriapp.com${file.childImageSharp.fixed.src}`,
+          content: `https://picks.electriapp.com${file.childImageSharp.gatsbyImageData}`,
         },
         {
           property: `og:type`,

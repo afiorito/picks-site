@@ -44,9 +44,12 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: 'G-ZRE41HF2XS',
+        trackingIds: [`G-ZRE41HF2XS`],
+        pluginConfig: {
+          head: true,
+        },
       },
     },
   ],

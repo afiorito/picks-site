@@ -2,7 +2,7 @@
 @import '../Device/device';
 
 @mixin transform($scale) {
-  transform: scale($scale, $scale) skew(-5deg, 9deg) rotate(6deg);
+  transform: scale($scale, $scale) skew(-6deg, 9deg) rotate(6deg);
 }
 
 $breakpoint-start: 1000;
