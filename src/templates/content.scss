@@ -1,4 +1,17 @@
+@import '../styles/variables';
+@import '../styles/fonts';
+@import '../styles/responsive';
+
+.main {
+  flex: 1;
+}
+
 .content {
   width: 100%;
   padding: 16px;
+}
+
+a,
+a:visited {
+  color: $purple;
 }

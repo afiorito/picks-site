@@ -1,7 +1,7 @@
 const path = require(`path`);
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
-  const contentTemplate = path.resolve(`src/templates/ContentTemplate.js`);
+  const contentTemplate = path.resolve(`./src/templates/ContentTemplate.tsx`);
   return graphql(`
     {
       allMarkdownRemark(limit: 1000) {

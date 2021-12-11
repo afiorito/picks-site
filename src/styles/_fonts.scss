@@ -1,7 +1,7 @@
 // paths relative to where its imported.
 @font-face {
   font-family: 'Open Sans';
-  src: url('../../fonts/OpenSans-Regular.ttf') format('truetype');
+  src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: fallback;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: 'Open Sans';
-  src: url('../../fonts/OpenSans-SemiBold.ttf') format('truetype');
+  src: url('../fonts/OpenSans-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: fallback;
@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: 'Circular';
-  src: url('../../fonts/OpenSans-Bold.ttf') format('truetype');
+  src: url('../fonts/OpenSans-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: fallback;

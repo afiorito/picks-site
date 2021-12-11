@@ -1,8 +1,13 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
+    author: `Electriapp`,
     title: `Picks`,
-    description: `An iOS app that picks for you!`,
-    author: `@electriapp`,
+    description: `A novel random generator iOS app that picks for you!`,
+    image: '/images/cover.png',
+    twitterUsername: '@electriapp',
+    url: 'https://picks.electriapp.com'
   },
   plugins: [
     {
@@ -14,7 +19,15 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-root-import`,
+      options: {
+        assets: path.join(__dirname, 'src', 'images'),
+        components: path.join(__dirname, 'src', 'components'),
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -49,7 +62,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        pathToConfigModule: `src/utilities/typography`,
       },
     },
   ],

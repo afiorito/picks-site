@@ -1,7 +1,7 @@
-import React from 'react';
+import { PropsWithChildren } from 'react';
 import './device.scss';
 
-export const Device = ({ children }) => (
+export const Device = ({ children }: PropsWithChildren<unknown>) => (
   <div className="device">
     <div className="side">
       <div className="screen">{children}</div>

@@ -1,5 +1,5 @@
 @import '../../styles/variables';
-@import '../Device/device';
+@import './device';
 
 @mixin transform($scale) {
   transform: scale($scale, $scale) skew(-6deg, 9deg) rotate(6deg);

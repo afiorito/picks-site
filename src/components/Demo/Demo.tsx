@@ -1,20 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { Device } from '../../components/Device';
+import { ReactNode, useEffect, useState } from 'react';
+import { Device } from './Device';
 import logo from '../../images/logo.svg';
 import './demo.scss';
 
 const foodPicker = {
   name: '@cuisine',
   color: '#FFDC7B',
-  picks: [
-    'Chinese',
-    'Thai',
-    'Italian',
-    'Indian',
-    'Mexican',
-    'American',
-    'Japanese',
-  ],
+  picks: ['Chinese', 'Thai', 'Italian', 'Indian', 'Mexican', 'American', 'Japanese'],
 };
 
 const bodyPartPicker = {
@@ -42,26 +34,19 @@ const data = [
   },
 ];
 
-const random = (max, min = 0) => Math.floor(Math.random() * (max - min)) + min;
+const random = (max: number, min = 0) => Math.floor(Math.random() * (max - min)) + min;
 
 export const Demo = () => {
-  const mapDataToGenerators = index => {
+  const mapDataToGenerators = (index?: number): { name: string; expression: ReactNode }[] => {
     return data.map((d, i) => {
       const { pickers, segments, ...generator } = d;
 
-      const expression = segments.map(segment => {
+      const expression = segments.map((segment) => {
         if (typeof segment === 'number') {
           const picker = pickers[segment];
-          const value =
-            i === index
-              ? picker.picks[random(picker.picks.length)]
-              : picker.name;
+          const value = i === index ? picker.picks[random(picker.picks.length)] : picker.name;
           return (
-            <span
-              key={segment}
-              className="picker"
-              style={{ backgroundColor: picker.color }}
-            >
+            <span key={segment} className="picker" style={{ backgroundColor: picker.color }}>
               {value}
             </span>
           );
@@ -93,7 +78,7 @@ export const Demo = () => {
   }, [index]);
 
   const renderGenerators = () => {
-    return generators.map(generator => (
+    return generators.map((generator) => (
       <div key={generator.name} className="generator">
         <h3>{generator.name}</h3>
         <p>{generator.expression}</p>
@@ -106,7 +91,7 @@ export const Demo = () => {
       <header className="nav-header">
         <img src={logo} alt="Picks Logo" />
       </header>
-      <div className="generators">{renderGenerators(generators[0])}</div>
+      <div className="generators">{renderGenerators()}</div>
     </Device>
   );
 };

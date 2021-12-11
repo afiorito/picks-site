@@ -1,5 +1,4 @@
 import { Link } from 'gatsby';
-import React from 'react';
 import { OutboundLink } from 'gatsby-plugin-google-gtag';
 
 import './footer.scss';
@@ -10,22 +9,13 @@ export const Footer = () => (
       <div className="section-container">
         <section className="footer__section">
           <h4 className="footer__section-title">Contact</h4>
-          <OutboundLink
-            className="footer__link"
-            href="https://twitter.com/electriapp"
-          >
+          <OutboundLink className="footer__link" href="https://twitter.com/electriapp">
             Twitter
           </OutboundLink>
-          <OutboundLink
-            className="footer__link"
-            href="https://www.instagram.com/electriapp"
-          >
+          <OutboundLink className="footer__link" href="https://www.instagram.com/electriapp">
             Instagram
           </OutboundLink>
-          <OutboundLink
-            className="footer__link"
-            href="https://www.facebook.com/electriapp"
-          >
+          <OutboundLink className="footer__link" href="https://www.facebook.com/electriapp">
             Facebook
           </OutboundLink>
           <a className="footer__link" href="mailto:support@electriapp.com">
