@@ -10,7 +10,7 @@ const ContentTemplate = ({ data }: any) => {
   return (
     <Page title={`Picks | ${frontmatter.title}`}>
       <main className="main container">
-        <div className={`content ${frontmatter.path.split('/')[1]}`}>
+        <div className={`content`}>
           <h1>{frontmatter.title}</h1>
           <div className="content__body" dangerouslySetInnerHTML={{ __html: html }} />
         </div>
@@ -23,11 +23,10 @@ export default ContentTemplate;
 
 export const pageQuery = graphql`
   query ($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    markdownRemark(fileAbsolutePath: { regex: $path }) {
       html
       frontmatter {
         lastUpdated(formatString: "MMMM DD, YYYY")
-        path
         title
       }
     }

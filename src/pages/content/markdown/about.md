@@ -1,5 +1,4 @@
 ---
-path: '/about'
 lastUpdated: '2020-09-14'
 title: 'About'
 ---

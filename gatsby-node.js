@@ -1,29 +1,28 @@
 const path = require(`path`);
-exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions;
-  const contentTemplate = path.resolve(`./src/templates/ContentTemplate.tsx`);
-  return graphql(`
+
+exports.createPages = ({ actions: { createPage }, graphql }) => {
+  const markdown = graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark {
         edges {
           node {
-            frontmatter {
-              path
-            }
+            fileAbsolutePath
           }
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
       return Promise.reject(result.errors);
     }
     return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
-        path: node.frontmatter.path,
-        component: contentTemplate,
+        path: `/${node.fileAbsolutePath.match(/markdown\/(.*)\.md/)[1]}/`,
+        component: path.resolve(`./src/components/templates/ContentTemplate.tsx`),
         context: {}, // additional data can be passed via context
       });
     });
   });
+
+  return Promise.all([markdown]);
 };

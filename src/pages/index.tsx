@@ -1,9 +1,9 @@
 import { Page } from 'components/common';
 import './index.scss';
 import { Demo } from 'components/demo';
-import dots from '../images/dots.svg';
+import dots from '../assets/dots.svg';
 import { OutboundLink } from 'gatsby-plugin-google-gtag';
-import appStore from '../images/app-store.svg';
+import appStore from '../assets/app-store.svg';
 
 const IndexPage = () => (
   <Page title="Picks | Landing Page">

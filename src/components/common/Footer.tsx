@@ -24,6 +24,9 @@ export const Footer = () => (
         </section>
         <section className="footer__section">
           <h4 className="footer__section-title">Picks</h4>
+          <Link className="footer__link" to="/">
+            Home
+          </Link>
           <OutboundLink
             href="https://apps.apple.com/us/app/picks-random-generator/id1536305926?mt=8"
             className="footer__link"

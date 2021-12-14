@@ -1,5 +1,4 @@
 ---
-path: '/privacy'
 lastUpdated: '2020-09-14'
 title: 'Privacy Policy'
 ---

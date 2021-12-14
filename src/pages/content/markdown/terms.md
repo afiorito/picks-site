@@ -1,5 +1,4 @@
 ---
-path: '/terms'
 lastUpdated: '2020-09-14'
 title: 'Terms of Use'
 ---

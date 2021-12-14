@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, useState } from 'react';
 import { Device } from './Device';
-import logo from '../../images/logo.svg';
+import logo from '../../assets/logo.svg';
 import './demo.scss';
 
 const foodPicker = {

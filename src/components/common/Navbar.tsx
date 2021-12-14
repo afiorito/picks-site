@@ -1,4 +1,4 @@
-import logo from '../../images/logo.svg';
+import logo from '../../assets/logo.svg';
 import './navbar.scss';
 import { Link } from 'gatsby';
 
