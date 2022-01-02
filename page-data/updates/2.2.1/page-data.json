@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-components-templates-content-template-tsx",
+    "path": "/updates/2.2.1/",
+    "result": {"data":{"markdownRemark":{"html":"<p>This release contains a bug fix for a crash on iOS 14 devices. Swiping to the settings screen or tapping the settings icon should now behave as expected.</p>","frontmatter":{"lastUpdated":null,"title":"v2.2.1"}}},"pageContext":{}},
+    "staticQueryHashes": ["531803365"]}
