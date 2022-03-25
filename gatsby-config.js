@@ -32,6 +32,28 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-remark-copy-relative-linked-files`,
+          {
+            resolve: `gatsby-remark-videos`,
+            options: {
+              pipelines: [
+                {
+                  name: 'h264',
+                  transcode: (chain) =>
+                    chain
+                      .videoCodec('libx264')
+                      .noAudio()
+                      .addOption('-profile:v', 'main')
+                      .addOption('-pix_fmt', 'yuv420p')
+                      .outputOptions(['-movflags faststart'])
+                      .videoBitrate('1000k'),
+                  maxHeight: 480,
+                  maxWidth: 900,
+                  fileExtension: 'mp4',
+                },
+              ],
+            },
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
