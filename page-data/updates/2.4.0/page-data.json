@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-components-templates-content-template-tsx",
     "path": "/updates/2.4.0/",
-    "result": {"data":{"markdownRemark":{"html":"<p>This release contains support for iOS 16 and bug fixes for the Apple Watch app.</p>\n<ul>\n<li>Added support for iOS 16</li>\n<li>Improved the picker wheel use more space on the Apple Watch</li>\n<li>Adjusted the complications so they look better on newer Apple Watch devices</li>\n</ul>","frontmatter":{"lastUpdated":null,"title":"v2.4.0"}}},"pageContext":{}},
+    "result": {"data":{"markdownRemark":{"html":"<p>This release contains support for iOS 16 and bug fixes for the Apple Watch app.</p>\n<ul>\n<li>Added support for iOS 16</li>\n<li>Increased the picker wheel size to use more space on the Apple Watch</li>\n<li>Adjusted the complications so they look better on newer Apple Watch devices</li>\n</ul>","frontmatter":{"lastUpdated":null,"title":"v2.4.0"}}},"pageContext":{}},
     "staticQueryHashes": ["531803365"]}
