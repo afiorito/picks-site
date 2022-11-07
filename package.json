@@ -42,8 +42,8 @@
     "gatsby-plugin-emotion": "^7.3.0",
     "gatsby-plugin-root-import": "^2.0.8",
     "gh-pages": "^3.2.3",
-    "node-sass": "^6.0.1",
     "prettier": "^2.4.0",
+    "sass": "^1.56.0",
     "twin.macro": "^2.8.2",
     "typescript": "^4.5.3"
   },
