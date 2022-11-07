@@ -27,23 +27,20 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-d7f94cdf487ba0604f4f.js"
+    "url": "webpack-runtime-07d125c48db1d0cb1198.js"
   },
   {
-    "url": "framework-714c93d83cdda6be36e2.js"
+    "url": "framework-e740c1ec544c0188becc.js"
   },
   {
-    "url": "app-41308b6a5f386682ae78.js"
+    "url": "app-99debee1a29d85804578.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "2f996f2900f8fc75ba7b31c76b9ee6bc"
+    "revision": "f49ed804a5129145538b8ab42b230275"
   },
   {
-    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-cabe69f18e79527f69ea.js"
-  },
-  {
-    "url": "polyfill-5a599db597c47de325dc.js"
+    "url": "polyfill-0c0eb38e9fbfa4e618b6.js"
   },
   {
     "url": "manifest.webmanifest",
@@ -73,6 +70,24 @@ const MessageAPI = {
 
   clearPathResources: event => {
     event.waitUntil(idbKeyval.clear())
+
+    // We detected compilation hash mismatch
+    // we should clear runtime cache as data
+    // files might be out of sync and we should
+    // do fresh fetches for them
+    event.waitUntil(
+      caches.keys().then(function (keyList) {
+        return Promise.all(
+          keyList.map(function (key) {
+            if (key && key.includes(`runtime`)) {
+              return caches.delete(key)
+            }
+
+            return Promise.resolve()
+          })
+        )
+      })
+    )
   },
 
   enableOfflineShell: () => {
@@ -139,7 +154,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-41308b6a5f386682ae78.js`))) {
+  if (!resources || !(await caches.match(`/app-99debee1a29d85804578.js`))) {
     return await fetch(event.request)
   }
 

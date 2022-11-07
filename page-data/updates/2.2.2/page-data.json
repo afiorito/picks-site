@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-components-templates-content-template-tsx",
-    "path": "/updates/2.2.2/",
-    "result": {"data":{"markdownRemark":{"html":"<p>This release contains bug fixes and performance improvements.</p>\n<p>It includes optimization for landscape orientation on certain screens.</p>","frontmatter":{"lastUpdated":null,"title":"v2.2.2"}}},"pageContext":{}},
-    "staticQueryHashes": ["531803365"]}
+{"componentChunkName":"component---src-components-templates-content-template-tsx","path":"/updates/2.2.2/","result":{"data":{"markdownRemark":{"html":"<p>This release contains bug fixes and performance improvements.</p>\n<p>It includes optimization for landscape orientation on certain screens.</p>","frontmatter":{"lastUpdated":null,"title":"v2.2.2"}}},"pageContext":{}},"staticQueryHashes":["531803365"]}

@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-components-templates-content-template-tsx",
-    "path": "/updates/2.3.1/",
-    "result": {"data":{"markdownRemark":{"html":"<p>This release contains bug fixes and performance improvements.</p>\n<ul>\n<li>Improved keyboard appearance behavior when editing generators</li>\n<li>Modified update notes to only show for larger updates</li>\n</ul>","frontmatter":{"lastUpdated":null,"title":"v2.3.1"}}},"pageContext":{}},
-    "staticQueryHashes": ["531803365"]}
+{"componentChunkName":"component---src-components-templates-content-template-tsx","path":"/updates/2.3.1/","result":{"data":{"markdownRemark":{"html":"<p>This release contains bug fixes and performance improvements.</p>\n<ul>\n<li>Improved keyboard appearance behavior when editing generators</li>\n<li>Modified update notes to only show for larger updates</li>\n</ul>","frontmatter":{"lastUpdated":null,"title":"v2.3.1"}}},"pageContext":{}},"staticQueryHashes":["531803365"]}
